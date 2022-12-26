@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            DerivedClass obj = new DerivedClass();
+            obj.Display();
         }
     }
     /// <summary>
@@ -37,6 +38,7 @@
             get;
             set;
         }
+
         public BaseClass(string name)
         {
             Name = name;
@@ -69,6 +71,11 @@
             }
         }
 
+        public DerivedClass() : this("Lada", "Vachina", 10)
+        {
+
+        }
+
         public DerivedClass(string name, string description) : base (name) 
         {
             Description = description;
@@ -79,7 +86,8 @@
         }
 
         public override void Display()
-        {
+        {   
+            base.Display();
             Console.WriteLine("Метод класса DerivedClass");
         }
     }
