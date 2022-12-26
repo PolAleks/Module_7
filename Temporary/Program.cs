@@ -25,22 +25,49 @@
             this.count = count;
         }
     }
-
+    /// <summary>
+    /// 7.1.10 - Пример работы this и base в конструкторе
+    /// </summary>
     class BaseClass
     {
         protected string Name;
-
+        
+        public virtual int Counter
+        {
+            get;
+            set;
+        }
         public BaseClass(string name)
         {
             Name = name;
+        }
+        /// <summary>
+        /// 7.2.3 - Виртуальный метод
+        /// </summary>
+        public virtual void Display()
+        {
+            Console.WriteLine("Метод класса BaseClass");
         }
     }
 
     class DerivedClass : BaseClass
     {
         public string Description;
+        private int counter;
 
-        public int Counter;
+        public override int Counter
+        {
+            get
+            {
+                return counter;
+            }
+            set
+            {
+                if (value < 0) 
+                    counter = 0;
+                counter = value;
+            }
+        }
 
         public DerivedClass(string name, string description) : base (name) 
         {
@@ -49,6 +76,11 @@
         public DerivedClass(string name, string description, int counter) : this(name, description)
         {
             Counter = counter;
+        }
+
+        public override void Display()
+        {
+            Console.WriteLine("Метод класса DerivedClass");
         }
     }
 
