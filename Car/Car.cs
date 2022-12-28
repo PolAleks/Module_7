@@ -6,46 +6,33 @@ using System.Threading.Tasks;
 
 namespace Car
 {
-    internal class Car<TEngine>
+    internal class Car<TEngine> where TEngine : Engine
     {
         public TEngine Engine;
 
-        public virtual void ChangePart<TPart>(TPart part) { }
+        public virtual void ChangePart<TPart>(TPart part) where TPart : CarPart { }
     }
+    abstract class Engine { }
+    abstract class CarPart { }
 
     /// <summary>
     /// Электрический двигатель
     /// </summary>
-    class ElectricEngine
-    {
-
-    }
+    class ElectricEngine : Engine { }
     /// <summary>
     /// Бензиновый двигатель
     /// </summary>
-    class GasEngine
-    {
-        
-    }
+    class GasEngine : Engine { }
     /// <summary>
     /// часть авто - аккумулятор
     /// </summary>
-    class Battery
-    {
-
-    }
+    class Battery : CarPart { }
     /// <summary>
     /// часть авто - диференциал
     /// </summary>
-    class Differential
-    {
-
-    }
+    class Differential : CarPart { }
     /// <summary>
     /// часть авто - колесо
     /// </summary>
-    class Wheel
-    {
-
-    }
+    class Wheel : CarPart { }
 }
