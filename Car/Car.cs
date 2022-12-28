@@ -6,12 +6,29 @@ using System.Threading.Tasks;
 
 namespace Car
 {
-    internal class Car<TEngine> where TEngine : Engine
+    abstract class Car<TEngine> where TEngine : Engine
     {
         public TEngine Engine;
 
         public virtual void ChangePart<TPart>(TPart part) where TPart : CarPart { }
     }
+
+    class ElectricCar : Car<ElectricEngine> 
+    {
+        public override void ChangePart<TPart>(TPart part)
+        {
+            
+        }
+    }
+
+    class GasCar : Car<GasEngine>
+    {
+        public override void ChangePart<TPart>(TPart part)
+        {
+            
+        }
+    }
+
     abstract class Engine { }
     abstract class CarPart { }
 
