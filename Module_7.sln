@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticField", "StaticField\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{D69D25AA-E8E2-4BC3-807A-D88EA73E10FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntExtensions", "IntExtensions\IntExtensions.csproj", "{CA3C26C6-0F95-40A8-B68B-C62B0C51F021}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D69D25AA-E8E2-4BC3-807A-D88EA73E10FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D69D25AA-E8E2-4BC3-807A-D88EA73E10FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D69D25AA-E8E2-4BC3-807A-D88EA73E10FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3C26C6-0F95-40A8-B68B-C62B0C51F021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3C26C6-0F95-40A8-B68B-C62B0C51F021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3C26C6-0F95-40A8-B68B-C62B0C51F021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3C26C6-0F95-40A8-B68B-C62B0C51F021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
